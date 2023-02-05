@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Greedy Pig</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+    <!-- Nav bar -->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback.html">Feedback</a>
+        </li>
+    </ul>
+
+
+    <div class="container">
+                
+        <!-- Title of game -->
+        <div class="row bg-maths text-center">
+            <h1 class="display-1">Greedy Pig</h1>
+        </div>
+        
+        <div class="container border border-5 border-dark mt-4">
+            <!-- Set number of rounds -->
+            <div class="row m-1">
+                <div class="col-md-12">
+                    <h3 id="number_of_rounds">#Rounds</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="slidecontainer">                   
+                        <input type="range" step="1" min="1" max="10" value="5" class="slider" id="myRange" onclick="endRound()">
+                    </div>    
+                </div>
+            </div>
+
+            <!-- Digital dice and score tracker -->
+            <div class="row m-1">
+
+                <div class="col-md-8 mt-4">
+                    <ol class="fs-1" id="round_scores">
+                        <!-- Generate depending on number of rounds -->
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <div class="row mt-4 mb-4 align-items-center">
+                        <div class="col-md-12">
+                            <button class="btn-lg btn-success w-100 h-100" onclick="rolldice()">Roll</button>
+                        </div>
+                        <!-- <div class="col-md-6 text-center">
+                            <h1 id="result"></h1>
+                        </div> -->
+                    </div>
+                    <div class="row mt-4 mb-4 align-items-center">
+                        <div class="col-md-6">
+                            <img id="die1" src="dice images/die1.svg" width="200" height="200">
+                        </div>
+                        <div class="col-md-6">
+                            <img id="die2" src="dice images/die1.svg" width="200" height="200">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Round over and game over alerts -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 bg-light" style="display: none;" id="round_over_message">
+                    <h1>Next Round</h1>
+                </div>
+                <div class="col-md-12 bg-maths" style="display: none;" id="game_over_message">
+                    <h1>Game Over</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game summary and key tags -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Summary</h1>
+                <span class="badge rounded-pill bg-time" data-bs-toggle="tooltip" data-bs-placement="right" title="Time">5min+</span>
+                <span class="badge rounded-pill bg-activity" data-bs-toggle="tooltip" data-bs-placement="right" title="Activity"><img src="/Anagram Game/res/activity.svg" alt="Group"></span>
+                <span class="badge rounded-pill bg-individual" data-bs-toggle="tooltip" data-bs-placement="right" title="Individual"><img src="/Anagram Game/res/person.svg" alt="Group"></span>
+
+                <p>Greedy Pig is a dice game that tests how far people are willing to go for points. Can you find the balance between playing it safe to secure your points and taking on the risk to secure victory?</p>
+            </div>
+        </div>
+
+        <!-- Instructions and game variations -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Instructions</h1>
+            <ol>
+                <li>Gather two dice OR use digital version.</li>
+                <li>Determine the number of rounds for the game (5 rounds for a ~5min game).</li>
+                <li>Everyone stands up to indicate they are in the round.</li>
+                <li>Roll the dice. The players can choose to stay standing to try to add to their score, but if a double is rolled, they lose all of their points for that round.</li>
+                <li>Continue rolling the dice until a double is rolled and the round is over.</li>
+                <li>When a player decides to sit during a round, the score they have accumulated in that round is added to their overall total. The player keeps track of their own score.</li>
+                <li>Play continues until the set number of rounds have been played.</li>
+                <li>The player with the highest overall score wins the game.</li>
+            </ol>
+            <p>Variations include...</p>
+            <ul>
+                <li>Add more dice or increase the number of rounds.</li>
+                <li>Players roll their own dice instead of as a class.</li>
+            </ul>
+            </div>
+        </div>
+        
+        
+
+
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/Greedy Pig Game/greedypig.js"></script>
+</body>
+</html>

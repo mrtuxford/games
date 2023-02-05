@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Rush</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback.html">Feedback</a>
+        </li>
+        </ul>
+
+
+
+    <div class="container">
+
+        <!-- Anagram Title -->
+        <div class="row bg-word text-center">
+            <h1 class="display-1">Word Rush</h1>
+        </div>
+
+        <!-- Anagram word display area -->
+        <div class="row mt-5 border">
+            <div class="col-md-9">
+                <div class="row h-100 align-items-center border border-5 border-dark">
+                    <div class="col-md-12">
+                        <h1 class="display-1 text-center text-uppercase" id="wordrush_word">W O R D R U S H</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-1 d-flex flex-column align-items-center justify-content-center">
+                <div class="div w-100" id="play">
+                    <button type="button" class="btn btn-success btn-lg w-100" id="play" onclick="startRound()" data-bs-toggle="tooltip" data-bs-placement="right" title="Play"><img class="w-50" src="/Anagram Game/res/play.svg" alt="Play"></button>
+                </div>
+                <!-- <button type="button" class="btn btn-link btn-lg w-100" onclick="showAnswer(), endRound()" data-bs-toggle="tooltip" data-bs-placement="right" title="Answer"><img class="w-50" src="/Anagram Game/res/check.svg" alt="Answer"></button> -->
+                <button type="button" class="btn btn-link btn-lg w-100" onclick="showDefinition()" data-bs-toggle="tooltip" data-bs-placement="right" title="Definition"><img class="w-50" src="/Anagram Game/res/book.svg" alt="Define"></button>
+            </div>
+            
+
+            <!-- Display countdown timer -->
+            <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-center display-2 mt-4"><span id="timer_value"></span></h1>
+                <div class="slidecontainer mt-5">                   
+                    <input type="range" step="10" min="10" max="120" value="60" class="slider" id="myRange" onclick="endRound()">
+                </div>    
+            </div>   
+            
+        </div>
+
+
+        <!-- Optional working out text area
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <textarea rows="2" class="w-100" placeholder="Optional working space. Use paper if you prefer." spellcheck="false"></textarea>
+            </div>
+        </div> -->
+
+        <!-- Generate solutions after each round -->
+        <div class="container-fluid text-break mt-4" id="wordrush_solutions"></div>
+
+
+        <!-- Change category buttons -->
+        <div class="row mt-5">
+            <div class="col-md-12 mt-4 mb-4" id="categories">
+                <!-- <button type="button" id="show_all_words" class="btn btn-link" onclick="toggleAllWordsDisplay()">See all words</button> -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Instructions and game variations -->
+        <div class="row justify-content-center">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item panel-heading">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Instructions
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>Word Rush is a word game played in pairs or small groups where the goal is to come up with as many words as possible using a given set of letters within a certain time limit. The group with the most words at the end of the time limit is the winner.</p>
+                        <ol>
+                            <li>Set the desired time limit and word category</li>
+                            <li>Hit the green play button to start the timer and show the key word (e.g. E X A M P L E)</li>
+                            <li>The students must work together to come up with as many words as possible using the given letters (e.g. ample, exam, map, plea, ...). They can use each letter the number of times it appears in the key word and can rearrange the letters to form different words.</li>
+                            <li>When the time is up, the students must stop writing and trade their list of words with another group.</li>
+                            <li>Show the possible solutions on screen and get students to check their work. Note: not all solutions are shown on screen - a dictionary may be required.</li>
+                            <li>The group with most correct words wins!</li>
+                        </ol>
+                        <p>Variations include...</p>
+                        <ul>
+                            <li>Using letters from the key words multiple times. This drastically increases the number of words and these solutions aren't automatically generated.</li>
+                            <li>Restrict the word length to a certain number so only words of that word length are accepted.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>   
+    
+        
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="wordrush.js"></script>
+    <script src="dictionary.js"></script>
+    <script src="cntdn.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddles Game</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback.html">Feedback</a>
+        </li>
+        </ul>
+
+
+
+    <div class="container">
+
+        <!-- Riddles Title -->
+        <div class="row bg-word text-center">
+            <h1 class="display-1">Riddles</h1>
+        </div>
+
+        <!-- Riddle display area -->
+        <div class="row mt-5 border">
+            <div class="col-md-9">
+                <div class="row border border-5 border-dark">
+                    <div class="col-md-12">
+                        <h1 class="display-1 text-center text-uppercase" id="riddle">What am I?</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <h1 class="display-1 text-center text-uppercase" id="riddle solution">_ _ _ _ _ _ _</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-1 d-flex flex-column align-items-center justify-content-center">
+                <div class="div w-100" id="play">
+                    <button type="button" class="btn btn-success btn-lg w-100" id="play" onclick="startRound()" data-bs-toggle="tooltip" data-bs-placement="right" title="Play"><img class="w-50" src="/Anagram Game/res/play.svg" alt="Play"></button>
+                </div>
+            </div>
+            
+
+            <!-- Display countdown timer -->
+            <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-center display-2 mt-4"><span id="timer_value"></span></h1>
+                <div class="slidecontainer mt-5">                   
+                    <input type="range" step="10" min="10" max="120" value="60" class="slider" id="myRange" onclick="endRound()">
+                </div>    
+            </div>   
+            
+        </div>
+
+        <!-- Change category buttons -->
+        <div class="row mt-5">
+            <div class="col-md-12 mt-4 mb-4" id="categories">
+                <!-- <button type="button" id="show_all_words" class="btn btn-link" onclick="toggleAllWordsDisplay()">See all words</button> -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Instructions and game variations -->
+        <div class="row justify-content-center">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item panel-heading">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Instructions
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>A riddle is a game in which players form words from a group of randomly picked letters. 
+                            You will see random letters and your task is to unscramble them into the longest word. 
+                            You can only use each letter once.
+                            There is a word that uses all the letters - can you find it?</p>
+                        <ol>
+                            <li>Set the desired time limit and word category</li>
+                            <li>Hit the green play button to start</li>
+                            <li>Players then call out OR write down the solution</li>
+                            <li>Award points to the person who gets it first OR to everyone who got it after the time limit</li>
+                        </ol>
+                        <p>Variations include...</p>
+                        <ul>
+                            <li>Splitting the class into teams and the first team to call out the correct anagram gets a point.</li>
+                            <li>Write multiple anagrams on the board for individuals or teams to solve. The individual or team with the most correct anagrams after a set time wins.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>   
+    
+        
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="riddles.js"></script>
+</body>
+</html>

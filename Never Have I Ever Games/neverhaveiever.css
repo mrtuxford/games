@@ -1,0 +1,33 @@
+  /* on topic menu item hover */
+  .active, .collapsible:hover {
+    background-color: #557182;
+  }
+  
+  /* gets rid of blue border when nav menu item is pressed */
+  button:focus {outline:0;}
+  
+  
+  /* links */
+  /* unvisited link */
+  a:link {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* visited link */
+  a:visited {
+    color: black;
+    text-decoration:solid;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: #557182;
+    text-decoration:wavy;
+  }
+  /* selected link */
+  a:active {
+    color: grey;
+  }
+  
+  
