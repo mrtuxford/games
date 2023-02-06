@@ -2,7 +2,7 @@ const word_games_activities = [
     {
         category: "word_games",
         name: "Anagram",
-        link: "anagram.html",
+        link: "/anagram.html",
         time: "2min+",
         tags: ["group","individual"],
         summary: "Unscramble the letters to find the original word in the brain-teasing game of Anagram!",
@@ -10,7 +10,7 @@ const word_games_activities = [
     {
         category: "word_games",
         name: "Word Rush",
-        link: "wordrush.html",
+        link: "/wordrush.html",
         time: "2min+",
         tags: ["group","individual"],
         summary: "A fast paced word search game where you come up with as many words as possible that use the letters in a given word.", 
@@ -42,7 +42,7 @@ const word_games_activities = [
     {
         category: "word_games",
         name: "Riddles",
-        link: "riddles.html",
+        link: "Riddles Game/riddles.html",
         time: "2min+",
         tags: ["group","individual"],
         summary: "\"What am I?\"", 
@@ -61,7 +61,7 @@ const math_games_activities = [
     {
         category: "maths_games",
         name: "Greedy Pig",
-        link: "greedypig.html",
+        link: "/greedypig.html",
         time: "5min+",
         tags: ["activity","individual"],
         summary: "This game gets people moving around the room and is a bit like musical chairs but less violent!"
@@ -69,7 +69,7 @@ const math_games_activities = [
     {
         category: "maths_games",
         name: "Closest Number",
-        link: "closestnumber.html",
+        link: "/closestnumber.html",
         time: "2min+",
         tags: ["individual"],
         summary: "Using the numbers provided, how close can you get to a specified number using the basic operations of mathematics?"
@@ -119,7 +119,7 @@ const team_building_activities = [
     {
         category: "team_building",
         name: "Never Have I Ever",
-        link: "neverhaveiever.html",
+        link: "/neverhaveiever.html",
         time: "5min+",
         tags: ["group"],
         summary: "'Never Have I Ever' is a game of truth-telling and storytelling."
@@ -130,7 +130,7 @@ const other_activities = [
     {
         category: "other",
         name: "Mafia",
-        link: "mafia.html",
+        link: "/mafia.html",
         time: "10min+",
         tags: ["activity","group"],
         summary: "'Mafia' is a game of deception and deduction played in two teams: mafia and townspeople."
