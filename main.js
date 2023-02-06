@@ -32,7 +32,7 @@ const math_games_activities = [
         link: "greedypig.html",
         time: "5min+",
         tags: ["activity","individual"],
-        summary: "This game gets people moving around the room and is a bit like musical chairs but less violent!"
+        summary: "There is a balance between greed and victory in this simple probability game."
     },
     {
         category: "maths_games",
