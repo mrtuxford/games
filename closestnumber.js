@@ -41,7 +41,7 @@ function startRound(){
     
     // Change the play button to show answer button
     // document.getElementById("play").className = "btn btn-light border btn-lg w-100";
-    document.getElementById("play").innerHTML = "<button type=\"button\" class=\"btn btn-link btn-lg w-100 border border-success\" onclick=\"showAnswer(), endRound()\" data-bs-toggle=\"tooltip\" data-bs-placement=\"right\" title=\"Answer\"><img class=\"w-50\" src=\"/res/check.svg\" alt=\"Answer\"></button>";
+    document.getElementById("play").innerHTML = "<button type=\"button\" class=\"btn btn-link btn-lg w-100 border border-success\" onclick=\"showAnswer(), endRound()\" data-bs-toggle=\"tooltip\" data-bs-placement=\"right\" title=\"Answer\"><img class=\"w-50\" src=\"res/check.svg\" alt=\"Answer\"></button>";
 }
 
 
@@ -52,7 +52,7 @@ function endRound(){
 
     // Reactivate the play button
     // document.getElementById("play").className = "btn btn-success btn-lg w-100";
-    document.getElementById("play").innerHTML = "<button type=\"button\" class=\"btn btn-success btn-lg w-100\" id=\"play\" onclick=\"startRound()\" data-bs-toggle=\"tooltip\" data-bs-placement=\"right\" title=\"Play\"><img class=\"w-50\" src=\"/res/play.svg\" alt=\"Play\"></button>";
+    document.getElementById("play").innerHTML = "<button type=\"button\" class=\"btn btn-success btn-lg w-100\" id=\"play\" onclick=\"startRound()\" data-bs-toggle=\"tooltip\" data-bs-placement=\"right\" title=\"Play\"><img class=\"w-50\" src=\"res/play.svg\" alt=\"Play\"></button>";
 }
 
 // When user hits play or reset, load random numbers, clear solutions from previous round
