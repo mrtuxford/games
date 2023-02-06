@@ -22,38 +22,6 @@ const word_games_activities = [
         time: "2min+",
         tags: ["group","individual"],
         summary: "Scattergories is a creative-thinking category-based party game.", 
-    },
-    {
-        category: "word_games",
-        name: "Hangman",
-        link: "",
-        time: "2min+",
-        tags: ["group","individual"],
-        summary: "Unleash your inner detective and test your vocabulary skills with the classic game of Hangman!", 
-    },
-    {
-        category: "word_games",
-        name: "Dingbats",
-        link: "",
-        time: "2min+",
-        tags: ["group","individual"],
-        summary: "The game, for two or more people, involves solving rebuses: puzzles in which a common word or saying is hidden in a cryptic or otherwise unique arrangement of symbols.", 
-    },
-    {
-        category: "word_games",
-        name: "Riddles",
-        link: "riddles.html",
-        time: "2min+",
-        tags: ["group","individual"],
-        summary: "\"What am I?\"", 
-    },
-    {
-        category: "word_games",
-        name: "Spelling Bee",
-        link: "",
-        time: "2min+",
-        tags: ["individual"],
-        summary: "", 
     }
 ]
 
@@ -77,14 +45,6 @@ const math_games_activities = [
 ]
 
 const māori_games_activities = [
-    {
-        category: "māori_games",
-        name: "Rangitahi",
-        link: "",
-        time: "5min+",
-        tags: ["activity","group"],
-        summary: "This game gets people moving around the room and is a bit like musical chairs but less violent!"
-    }
 ]
 
 const quizzes_activities = [
